@@ -22,7 +22,12 @@
 
 const objLat = (obj) => {
     // write your code here
-};
+        const firstNameCap = obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1);
+        const lastNameCap = obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1);
+        let fullName = firstNameCap + " " + lastNameCap;
+        let text = `my name is ${fullName} I am ${obj.age} YO, and I love ${obj.hobby}.`; 
+        return text;
+        };
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -86,7 +91,24 @@ const objLat = (obj) => {
 
 const cvFormatter = (arr) => {
     // write your code here
-};
+        let output = [];
+        for(let i = 0; i < arr.length ; i++){
+            if (arr[i].yearsOfExperience > 1) {
+                let fullName = "";
+                if(arr[i].firstName != null){
+                    fullName = arr[i].firstName;
+                } 
+                if(arr[i].lastName != null){
+                    fullName = fullName + " " + arr[i].lastName;
+                }
+                output.push({
+                    "fullName": fullName,
+                    "tech": arr[i].tech
+                })
+            }
+        } 
+        return output;
+       };    
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
