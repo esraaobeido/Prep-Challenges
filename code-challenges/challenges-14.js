@@ -80,9 +80,7 @@ const replaceWords = (str) => {
           words.splice(i, 1, wordMap[words[i]]);
         }
       }
-    
-      // Join the array of words into a string and return it
-      return words.join(' ');
+          return words.join(' ');
     }
 // -------------------------------------------------------------------------------------------------------
 
