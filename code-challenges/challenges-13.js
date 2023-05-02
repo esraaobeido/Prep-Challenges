@@ -59,13 +59,13 @@ const objectCounter = (obj) => {
 //
 // ------------------------
 
+
 const stringReverse = (str) => {
     // write your code here
      let words = str.split(' ');
       let reversed = words.reduce((acc, cur) => [cur].concat(acc), []);
       return reversed.join(' '); 
       }
-      
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
